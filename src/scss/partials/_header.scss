@@ -1,0 +1,12 @@
+header {
+  background-color: $black;
+  nav {
+    @include flex(row, space-around, center);
+    max-width: 1440px;
+    margin: auto;
+    ul {
+      @include flex(row, center, center);
+      gap: 2em;
+    }
+  }
+}

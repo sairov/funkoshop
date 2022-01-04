@@ -2,17 +2,19 @@
   "name": "funkoshop",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass:build": "sass src/scss/index.scss public/css/index.css",
-    "start": "nodemon src/app.js",
-    "start:dev": "\"npm run sass:build\" && nodemon src/app.js"
+    "sass:watch": "sass --watch src/scss/index.scss public/css/index.css",
+    "start": "nodemon app.js",
+    "start:dev": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.2"
   }
 }
