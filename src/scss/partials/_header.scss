@@ -1,12 +1,37 @@
 header {
   background-color: $black;
+
+  picture {
+    max-width: 300px;
+    img {
+      width: 100%;
+    }
+  }
+
   nav {
-    @include flex(row, space-around, center);
+    @include flex(row, space-between, center);
+    padding: 0 2rem;
     max-width: 1440px;
     margin: auto;
     ul {
       @include flex(row, center, center);
-      gap: 2em;
+      gap: 3rem;
+    }
+
+    .link {
+      font-family: $raleway;
+      font-weight: medium;
+      @include bg-transition;
+      &:not(.icon) {
+        padding: 1rem 2rem;
+      }
+      &__icon {
+        width: 24px;
+        height: 24px;
+      }
+      &:hover:not(.icon) {
+        @include bg-hover($primary, inherit);
+      }
     }
   }
 }
