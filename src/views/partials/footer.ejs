@@ -1,0 +1,40 @@
+<footer>
+    <section>
+        <nav class="navbar">
+            <ul class="navbar__list">
+                <li class="navbar__list--link"><a href="/home">HOME</a></li>
+                <li class="navbar__list--link"><a href="/shop">SHOP</a></li>
+                <li class="navbar__list--link"><a href="/contact">CONTACTO</a></li>
+                <li class="navbar__list--link"><a href="/register">REGISTRARSE</a></li>
+                <li class="navbar__list--link"><a href="/login">INGRESAR</a></li>
+                <li class="navbar__list--link"><a href="/cart">CARRITO</a></li>
+            </ul>
+        </nav>
+        <picture>
+            <img src="/img/branding/isotype.svg" alt="Isotipo de la marca Funkoshop">
+        </picture>
+    </section>
+    <p class="copy">All rights reserved 2022 - Funkoshop &copy;</p>
+</footer>
+<script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+<script>
+    new Glide('.glide', 
+        {
+            type: 'carousel',
+            startAt: 0,
+            perView: 3,
+            gap: 100,
+            breakpoints: {
+                800: {
+                    perView: 2
+                    },
+                600: {
+                    perView: 1
+                }
+            }
+        }           
+    ).mount();
+</script>    
+</body>
+</html>
