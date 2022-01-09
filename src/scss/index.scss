@@ -1,6 +1,25 @@
+// FONTS
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Raleway:wght@200;300;400;500;700;800&display=swap");
+// Required Core Stylesheet
+@import "../../node_modules/@glidejs/glide/src/assets/sass/glide.core";
+// Optional Theme Stylesheet
+@import "../../node_modules/@glidejs/glide/src/assets/sass/glide.theme";
 
+// GLOBALS
 @import "./variables";
 @import "./globals";
 @import "./mixins";
+
+// MISC
+@import "./animations";
+
+// VIEWS
+@import "./views/home";
+@import "./views/shop";
+
+// PARTIALS
 @import "./partials/header";
+@import "./partials/footer";
+
+// COMPONENTS
+@import "./components/slider";

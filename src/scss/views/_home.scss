@@ -1,0 +1,88 @@
+.hero {
+  color: $white;
+  height: 30vh;
+  background-image: url("/img/funkos-banner.webp");
+  background-size: cover;
+  filter: brightness(0.9);
+  @include flex(row, flex-start, center);
+  &__info {
+    @include flex(column, center, flex-start);
+    flex-grow: 1;
+    max-width: 1440px;
+    margin: auto;
+
+    &--title {
+      font-size: $jumbo;
+    }
+    &--desc {
+      font-size: $medium;
+      font-weight: 400;
+    }
+    &--link {
+      margin-top: 2.5rem;
+      font-weight: 500;
+      color: $black;
+      background-color: $white;
+      padding: 0.8rem 8rem;
+      text-align: center;
+      border-radius: 50px;
+      @include bg-transition;
+      &:hover {
+        @include bg-hover($primary, $white);
+      }
+    }
+  }
+}
+
+.collection {
+  @include flex(row, space-between, center);
+  max-width: 1440px;
+  padding: 0 3rem;
+  margin: auto;
+
+  &__info {
+    @include flex(column, center, flex-start);
+    gap: 1rem;
+    flex-grow: 1.5;
+    &--title {
+      font-size: $jumbo;
+      width: 70%;
+    }
+    &--desc {
+      font-size: $medium;
+      font-weight: 400;
+      color: $secondary;
+      border-bottom: 3px solid $primary;
+      width: 100%;
+      padding-bottom: 2rem;
+    }
+    &--link {
+      margin-top: 2.5rem;
+      font-weight: 500;
+      color: $white;
+      background-color: $black;
+      padding: 1.3rem 4.5rem;
+      text-align: center;
+      border-radius: 50px;
+      @include bg-transition;
+
+      &:hover {
+        @include bg-hover($primary, $white);
+      }
+    }
+  }
+
+  &__picture {
+    flex-grow: 1;
+    &--img {
+      width: 100%;
+      object-fit: scale-down;
+      object-position: right;
+    }
+  }
+}
+
+.order {
+  order: -1;
+  object-position: left;
+}

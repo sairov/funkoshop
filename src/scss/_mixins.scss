@@ -4,3 +4,12 @@
   justify-content: $jt;
   align-items: $al;
 }
+
+@mixin bg-transition {
+  transition: background 0.3s ease;
+}
+
+@mixin bg-hover($bg-color, $tx-color) {
+  background-color: $bg-color;
+  color: $tx-color;
+}

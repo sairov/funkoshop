@@ -8,7 +8,7 @@
 
 html {
   font-size: 62.5%;
-  font-family: $inter;
+  font-family: $raleway;
 }
 
 ul {
@@ -18,5 +18,10 @@ ul {
 a {
   color: #fff;
   text-decoration: none;
-  font-size: 2em;
+  font-weight: 400;
+  font-size: $medium;
+}
+
+p {
+  font-family: $inter;
 }
