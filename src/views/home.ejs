@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
     <%- include('partials/header'); -%>
     <section class="hero">
         <article class="hero__info">
@@ -8,97 +6,20 @@
             <a class="hero__info--link" href="/shop?sort=last_arrived">SHOP</a>
         </article>
     </section>
-    <section class="collection">
-        <article class="collection__info">
-            <h3 class="collection__info--title">STAR WARS & <br>THE MANDALORIAN</h3>
-            <p class="collection__info--desc">Disfruta de una saga que sigue <br>agregando personajes a su colección.</p>
-            <a class="collection__info--link" href="/shop?collection=starwars">VER COLECCIÓN</a>
-        </article>
-        <picture class="collection__picture">
-            <img class="collection__picture--img" src="/img/star-wars/baby-yoda-1.webp" alt="Funko Pop de la colección">
-        </picture>
-    </section>
-    <section class="slider-container">
-
-        <!-- <div class="slider">
-            <article class="card">
-                <a href="/item/1">
-                    <picture class="card__picture">
-                        <img class="card__picture--img card__picture--img--1" src="/img/star-wars/trooper-1.webp" alt="Stormtrooper lightsaber funko pop figure">
-                        <img class="card__picture--img card__picture--img--2" src="/img/star-wars/trooper-box.webp" alt="Stormtrooper lightsaber funko pop figure">                    
-                    </picture>
-                    <div class="card__info">
-                        <h3 class="card__info--title">STAR WARS</h3>
-                        <h4 class="card__info--item">STORMTROOPER LIGHTSABER</h4>
-                        <p class="card__info--price">$ 1799,99.-</p>
-                        <p class="card__info--dues">3 CUOTAS SIN INTERÉS</p>
-                    </div>
-                </a>
+    <% collections.forEach((collection, i) => { %>
+        <section class="collection">
+            <article class="collection__info">
+                <h3 class="collection__info--title"><%= collection.title.toUpperCase(); %></h3>
+                <p class="collection__info--desc"><%= collection.description %></p>
+                <a class="collection__info--link" href="/shop?filter=<%= collection.licence %>"><%= collection.cta.toUpperCase(); %></a>
             </article>
-        </div>  -->
-        <div class="glide">
-            <h2>ÚLTIMOS LANZAMIENTOS</h2>
-            <div class="glide__track" data-glide-el="track">
-              <ul class="glide__slides">
-                <li class="glide__slide">
-                    <article class="card">
-                        <a href="/item/1">
-                            <picture class="card__picture">
-                                <span class="card__picture--pill">NUEVO</span>
-                                <img class="card__picture--img card__picture--img--1" src="/img/star-wars/trooper-1.webp" alt="Stormtrooper lightsaber funko pop figure">
-                                <img class="card__picture--img card__picture--img--2" src="/img/star-wars/trooper-box.webp" alt="Stormtrooper lightsaber funko pop figure">                    
-                            </picture>
-                            <div class="card__info">
-                                <h3 class="card__info--title">STAR WARS</h3>
-                                <h4 class="card__info--item">STORMTROOPER LIGHTSABER</h4>
-                                <p class="card__info--price">$ 1799,99.-</p>
-                                <p class="card__info--dues">3 CUOTAS SIN INTERÉS</p>
-                            </div>
-                        </a>
-                    </article>
-                </li>
-                <li class="glide__slide">
-                    <article class="card">
-                        <a href="/item/1">
-                            <picture class="card__picture">
-                                <span class="card__picture--pill">NUEVO</span>
-                                <img class="card__picture--img card__picture--img--1" src="/img/star-wars/luke-1.webp" alt="Stormtrooper lightsaber funko pop figure">
-                                <img class="card__picture--img card__picture--img--2" src="/img/star-wars/luke-box.webp" alt="Stormtrooper lightsaber funko pop figure">                    
-                            </picture>
-                            <div class="card__info">
-                                <h3 class="card__info--title">STAR WARS</h3>
-                                <h4 class="card__info--item">STORMTROOPER LIGHTSABER</h4>
-                                <p class="card__info--price">$ 1799,99.-</p>
-                                <p class="card__info--dues">3 CUOTAS SIN INTERÉS</p>
-                            </div>
-                        </a>
-                    </article>
-                </li>
-                <li class="glide__slide">
-                    <article class="card">
-                        <a href="/item/1">
-                            <picture class="card__picture">
-                                <span class="card__picture--pill">NUEVO</span>
-                                <img class="card__picture--img card__picture--img--1" src="/img/star-wars/trooper-1.webp" alt="Stormtrooper lightsaber funko pop figure">
-                                <img class="card__picture--img card__picture--img--2" src="/img/star-wars/trooper-box.webp" alt="Stormtrooper lightsaber funko pop figure">                    
-                            </picture>
-                            <div class="card__info">
-                                <h3 class="card__info--title">STAR WARS</h3>
-                                <h4 class="card__info--item">STORMTROOPER LIGHTSABER</h4>
-                                <p class="card__info--price">$ 1799,99.-</p>
-                                <p class="card__info--dues">3 CUOTAS SIN INTERÉS</p>
-                            </div>
-                        </a>
-                    </article>
-                </li>
-              </ul>
-            </div>
-            <div class="glide__arrows" data-glide-el="controls">
-                <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><span class="iconify" data-icon="fa-solid:chevron-left"></span></button>
-                <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><span class="iconify" data-icon="fa-solid:chevron-right"></span></button>
-            </div>
-        </div>
-    </section> 
+            <picture class="collection__picture <%= i % 2 !== 0 ? 'order' : '' %>">
+                <img class="collection__picture--img" src="/img<%= collection.img %>" alt="Colleción de <%= collection.title %>">
+            </picture>
+        </section>
+    <%}); %>
+   
+    <%- include('components/slider'); -%>
     <%- include('partials/footer'); -%>
     
    

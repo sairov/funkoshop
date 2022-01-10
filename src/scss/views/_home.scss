@@ -38,6 +38,7 @@
   @include flex(row, space-between, center);
   max-width: 1440px;
   padding: 0 3rem;
+  gap: 10rem;
   margin: auto;
 
   &__info {
@@ -46,6 +47,7 @@
     flex-grow: 1.5;
     &--title {
       font-size: $jumbo;
+      font-weight: 500;
       width: 70%;
     }
     &--desc {
@@ -73,16 +75,16 @@
   }
 
   &__picture {
-    flex-grow: 1;
     &--img {
-      width: 100%;
       object-fit: scale-down;
       object-position: right;
     }
   }
-}
 
-.order {
-  order: -1;
-  object-position: left;
+  .order {
+    order: -1;
+    img {
+      object-position: left;
+    }
+  }
 }
