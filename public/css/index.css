@@ -266,6 +266,134 @@ p {
   object-position: left;
 }
 
+.products {
+  max-width: 1440px;
+  margin: auto;
+  padding: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.products .card {
+  width: 30%;
+}
+
+@media (max-width: 900px) {
+  .products .card {
+    width: 50%;
+  }
+}
+@media (max-width: 420px) {
+  .products .card {
+    width: 100%;
+  }
+}
+.item {
+  margin: auto;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+}
+.item__picture {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+.item__picture--pill {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.6em;
+  font-weight: 600;
+  background-color: #ff7070;
+  color: #ffffff;
+  padding: 1rem 2rem;
+}
+.item__picture--img {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: contain;
+  animation: fade 0.7s;
+}
+.item__picture--img--2 {
+  display: none;
+}
+.item__picture:hover .item__picture--img--1 {
+  display: none;
+}
+.item__picture:hover .item__picture--img--2 {
+  animation: fade 0.7s;
+  display: block;
+}
+.item__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex-grow: 1;
+}
+.item__info--licence {
+  font-size: 1.6em;
+  color: #4f4f4f;
+  font-weight: 400;
+}
+.item__info--name {
+  font-size: 3.8em;
+}
+.item__info--description {
+  font-size: 2.4em;
+  color: #4f4f4f;
+  font-weight: 400;
+  max-width: 70%;
+}
+.item__info--price {
+  font-size: 3.8em;
+}
+.item__form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+.item__form--btn, .item__form--input {
+  padding: 0.4rem;
+  font-size: 2.4em;
+  width: 50px;
+  text-align: center;
+}
+.item__form--btn {
+  background-color: #4f4f4f;
+  color: #ffffff;
+  border: 3px solid #4f4f4f;
+  cursor: pointer;
+}
+.item__form--btn:hover {
+  opacity: 0.7;
+}
+.item__form--submit {
+  background-color: #ff3333;
+  color: #ffffff;
+  font-size: large;
+  padding: 1rem 1.5rem;
+  border: none;
+  cursor: pointer;
+}
+.item__form--submit:hover {
+  background-color: #ff7070;
+}
+
 header {
   background-color: #111111;
 }
@@ -367,14 +495,18 @@ footer .copy {
   font-size: 3.8em;
   padding-bottom: 6rem;
 }
-.slider-container .glide .card__picture {
+.slider-container .glide .iconify {
+  color: #4f4f4f;
+}
+
+.card__picture {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   position: relative;
 }
-.slider-container .glide .card__picture--pill {
+.card__picture--pill {
   display: block;
   position: absolute;
   top: 0;
@@ -385,29 +517,29 @@ footer .copy {
   color: #ffffff;
   padding: 1rem 2rem;
 }
-.slider-container .glide .card__picture--img {
+.card__picture--img {
   width: 100%;
   height: 100%;
   object-position: center;
   object-fit: contain;
   animation: fade 0.7s;
 }
-.slider-container .glide .card__picture--img--2 {
+.card__picture--img--2 {
   display: none;
 }
-.slider-container .glide .card__picture:hover .card__picture--img--1 {
+.card__picture:hover .card__picture--img--1 {
   display: none;
 }
-.slider-container .glide .card__picture:hover .card__picture--img--2 {
+.card__picture:hover .card__picture--img--2 {
   animation: fade 0.7s;
   display: block;
 }
-.slider-container .glide .card a {
+.card a {
   font-size: inherit;
   text-decoration: none;
   color: inherit;
 }
-.slider-container .glide .card__info {
+.card__info {
   font-family: "Inter", sans-serif;
   padding: 2rem;
   display: flex;
@@ -416,24 +548,21 @@ footer .copy {
   align-items: flex-start;
   gap: 1rem;
 }
-.slider-container .glide .card__info--title {
+.card__info--title {
   font-size: 1.2em;
   font-weight: 400;
 }
-.slider-container .glide .card__info--item {
+.card__info--item {
   font-size: 1.8em;
   font-weight: bold;
 }
-.slider-container .glide .card__info--price {
+.card__info--price {
   font-size: 1.6em;
 }
-.slider-container .glide .card__info--dues {
+.card__info--dues {
   color: #ff3333;
   font-size: 1.2em;
   font-weight: bold;
-}
-.slider-container .glide .iconify {
-  color: #4f4f4f;
 }
 
 /*# sourceMappingURL=index.css.map */

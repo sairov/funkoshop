@@ -1,0 +1,26 @@
+<%- include('../partials/header'); -%>
+<!-- <h1>TIENDA</h1>
+<h2>Encuentra el próximo funko de tu colección.</h2> -->
+<section class="products">
+    <% items.forEach(item => { %> 
+        <article class="card">
+            <a href="/shop/detail/<%= item.id %>">
+                <picture class="card__picture">
+                    <% if (item.discount) { %>
+                        <span class="card__picture--pill"><%= item.discount %></span>
+                    <% } %>
+                    <img class="card__picture--img card__picture--img--1" src="/img<%= item.img.front %>" alt="<%= item.desc %> - Figura">
+                    <img class="card__picture--img card__picture--img--2" src="/img/<%= item.img.back %>" alt="<%= item.desc %> - Caja">                    
+                </picture>
+                <div class="card__info">
+                    <h3 class="card__info--title"><%= item.licence.toUpperCase()%></h3>
+                    <h4 class="card__info--item"><%= item.item.toUpperCase() %></h4>
+                    <p class="card__info--price">$ <%= item.price %> .-</p>
+                    <p class="card__info--dues"><%= item.dues %> CUOTAS SIN INTERÉS</p>
+                </div>
+            </a>
+        </article>
+    <% }); %> 
+</section>
+<%- include('../components/slider'); -%>
+<%- include('../partials/footer'); -%>

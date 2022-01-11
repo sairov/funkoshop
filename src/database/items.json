@@ -33,8 +33,8 @@
         "item": "Luke Skylwalker & Grogu",
         "description": "Figura coleccionable de Luke Skylwalker & Grogu - The Mandalorian Saga.",
         "img": {
-            "front": "/star-wars/bobbafeth-1.webp",
-            "back": "/star-wars/bobbafeth-box.webp"
+            "front": "/star-wars/luke-1.webp",
+            "back": "/star-wars/luke-box.webp"
         },
         "price": 1799.99,
         "dues": 6,
