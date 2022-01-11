@@ -1,0 +1,24 @@
+<%- include('../partials/header'); -%>
+<section>
+    <picture>
+        <img src="/img/<%= item.img.front %>" alt="<%= item.title %> - Figura">
+        <img src="/img/<%= item.img.back %>" alt="<%= item.title %> - Caja">
+    </picture>
+    <article>
+        <p><%= item.licence.toUpperCase() %></p>
+        <h2><%= item.item.toUpperCase() %></h2>
+        <p><%= item.description %></p>
+        <p><%= item.price %></p>
+        <form action="/cart/add" method="POST" enctype="application/x-www-form-urlencoded">
+            <div>
+                <button type="button">-</button>
+                <input type="text" placeholder="0">
+                <button type="button">+</button>
+            </div>
+            <button type="submit">Agregar al Carrito</button>
+        </form>
+    </article>
+</section>
+<%- include('../components/slider'); -%>
+<%- include('../partials/footer'); -%>
+

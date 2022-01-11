@@ -6,8 +6,12 @@ module.exports = {
     index: (req, res) => {
         let data = items.filter(el => el.sells > 10).sort((a ,b) => b.sells - a.sells);
         return res.render('home', {
-            title: "Home",
-            items: data,
+            pageTitle: "Home",
+            carousel: {
+                condition: "news",
+                items: data,
+                title: "últimos lanzamientos"
+            },
             collections
         })
     },

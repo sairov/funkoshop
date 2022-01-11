@@ -1,14 +1,17 @@
+<% const { items, title, condition } = carousel; %>
 <section class="slider-container">
     <div class="glide">
-        <h2>ÚLTIMOS LANZAMIENTOS</h2>
+        <h2><%= title.toUpperCase(); %></h2>
         <div class="glide__track" data-glide-el="track">
           <ul class="glide__slides">
             <% items.forEach(item => { %>
                 <li class="glide__slide">
                     <article class="card">
-                        <a href="/item/<%= item.id %>">
+                        <a href="/shop/detail/<%= item.id %>">
                             <picture class="card__picture">
-                                <span class="card__picture--pill">NUEVO</span>
+                                <% if (condition == "news") { %>
+                                    <span class="card__picture--pill">NUEVO</span>
+                                <% } %>
                                 <img class="card__picture--img card__picture--img--1" src="/img<%= item.img.front %>" alt="<%= item.desc %> - Figura">
                                 <img class="card__picture--img card__picture--img--2" src="/img/<%= item.img.back %>" alt="<%= item.desc %> - Caja">                    
                             </picture>
