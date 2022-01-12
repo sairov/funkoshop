@@ -13,8 +13,8 @@ app.set('view engine', 'ejs');
 
 app.use(express.static(publicPath));
 
-app.use(mainRoutes);
-app.use('/shop', shopRoutes);
+app.use('/', mainRoutes);
+app.use('/shop',shopRoutes);
 
 
 app.listen(puerto, () => console.log('Servidor corriendo en puerto ' + puerto));
