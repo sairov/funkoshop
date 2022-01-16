@@ -1,5 +1,4 @@
 .products {
-  max-width: 1440px;
   margin: auto;
   padding: 4rem;
   @include flex(row, space-around, center);

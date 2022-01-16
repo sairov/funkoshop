@@ -1,27 +1,29 @@
 <%- include('../partials/header'); -%>
-<section class="item">
-    <picture class="item__picture">
-        <% if (item.discount) { %>
-            <span class="card__picture--pill"><%= item.discount %></span>
-        <% } %>
-        <img class="item__picture--img item__picture--img--1" src="/img/<%= item.img.front %>" alt="<%= item.title %> - Figura">
-        <img class="item__picture--img item__picture--img--2" src="/img/<%= item.img.back %>" alt="<%= item.title %> - Caja">
-    </picture>
-    <article class="item__info">
-        <p class="item__info--licence"><%= item.licence.toUpperCase() %></p>
-        <h2 class="item__info--name"><%= item.item.toUpperCase() %></h2>
-        <p class="item__info--description"><%= item.description %></p>
-        <p class="item__info--price">$ <%= item.price %></p>
-        <form class="item__form" action="/cart/add" method="POST" enctype="application/x-www-form-urlencoded">
-            <div class="item__form--container">
-                <button class="item__form--btn" type="button">-</button>
-                <input class="item__form--input" type="text" placeholder="0">
-                <button class="item__form--btn" type="button">+</button>
-            </div>
-            <input class="item__form--submit" type="submit" value="Agregar al Carrito">
-        </form>
-    </article>
-</section>
-<%- include('../components/slider'); -%>
+<main>
+    <section class="item">
+        <picture class="item__picture">
+            <% if (item.discount) { %>
+                <span class="card__picture--pill"><%= item.discount %></span>
+            <% } %>
+            <img class="item__picture--img item__picture--img--1" src="/img/<%= item.img.front %>" alt="<%= item.title %> - Figura">
+            <img class="item__picture--img item__picture--img--2" src="/img/<%= item.img.back %>" alt="<%= item.title %> - Caja">
+        </picture>
+        <article class="item__info">
+            <p class="item__info--licence"><%= item.licence.toUpperCase() %></p>
+            <h2 class="item__info--name"><%= item.item.toUpperCase() %></h2>
+            <p class="item__info--description"><%= item.description %></p>
+            <p class="item__info--price">$ <%= item.price %></p>
+            <form class="item__form" action="/cart/add" method="POST" enctype="application/x-www-form-urlencoded">
+                <div class="item__form--container">
+                    <button class="item__form--btn" type="button">-</button>
+                    <input class="item__form--input" type="text" placeholder="0">
+                    <button class="item__form--btn" type="button">+</button>
+                </div>
+                <input class="item__form--submit" type="submit" value="Agregar al Carrito">
+            </form>
+        </article>
+    </section>
+    <%- include('../components/slider'); -%>
+</main>
 <%- include('../partials/footer'); -%>
 

@@ -1,8 +1,9 @@
 <%- include('../partials/header'); -%>
-<!-- <h1>TIENDA</h1>
+<main>
+    <!-- <h1>TIENDA</h1>
 <h2>Encuentra el próximo funko de tu colección.</h2> -->
-<section class="products">
-    <% items.forEach(item => { %> 
+<section class="products container">
+    <% products.forEach(item => { %> 
         <article class="card">
             <a href="/shop/detail/<%= item.id %>">
                 <picture class="card__picture">
@@ -23,4 +24,5 @@
     <% }); %> 
 </section>
 <%- include('../components/slider'); -%>
+</main>
 <%- include('../partials/footer'); -%>

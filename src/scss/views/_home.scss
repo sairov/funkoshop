@@ -4,13 +4,12 @@
   background-image: url("/img/funkos-banner.webp");
   background-size: cover;
   filter: brightness(0.9);
+  padding: 0 4rem;
   @include flex(row, flex-start, center);
   &__info {
     @include flex(column, center, flex-start);
     flex-grow: 1;
-    max-width: 1440px;
     margin: auto;
-
     &--title {
       font-size: $jumbo;
     }
@@ -36,7 +35,6 @@
 
 .collection {
   @include flex(row, space-between, center);
-  max-width: 1440px;
   padding: 0 3rem;
   gap: 10rem;
   margin: auto;

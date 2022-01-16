@@ -22,7 +22,8 @@ header {
       font-family: $raleway;
       font-weight: medium;
       @include bg-transition;
-      &:not(.icon) {
+      &:not(.icon) a{
+        display: inline-block;
         padding: 1rem 2rem;
       }
       &__icon {

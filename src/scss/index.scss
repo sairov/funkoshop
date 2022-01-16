@@ -7,8 +7,8 @@
 
 // GLOBALS
 @import "./variables";
-@import "./globals";
 @import "./mixins";
+@import "./globals";
 
 // MISC
 @import "./animations";
@@ -17,9 +17,12 @@
 @import "./views/home";
 @import "./views/shop";
 @import "./views/productDetails";
+@import "./views/login";
+@import "./views/register";
 
 // PARTIALS
 @import "./partials/header";
+@import "./partials/form";
 @import "./partials/footer";
 
 // COMPONENTS
