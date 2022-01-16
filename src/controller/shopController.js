@@ -7,9 +7,12 @@ module.exports = {
     let data = items
       .filter((el) => el.sells > 10)
       .sort((a, b) => b.sells - a.sells);
+      
+    let products = req.query.filter ? items.filter(item => item.collection == req.query.filter) : items;
+
     return res.render(path.resolve(__dirname, "../views/shop/shop"), {
       pageTitle: "Tienda",
-      items,
+      products,
       carousel: {
         condition: "news",
         items: data,

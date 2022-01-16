@@ -1,6 +1,7 @@
 [
     {
         "id": "STW001001",
+        "collection": "starwars",
         "licence": "Star Wars",
         "item": "Baby Yoda Blueball",
         "description": "Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga, edición limitada.",
@@ -15,6 +16,7 @@
     },
     {
         "id": "STW001002",
+        "collection": "starwars",
         "licence": "Star Wars",
         "item": "Boba Fett Fighter",
         "description": "Figura coleccionable de Boba Fett Fighter - The Mandalorian Saga.",
@@ -29,6 +31,7 @@
     },
     {
         "id": "STW001003",
+        "collection": "starwars",
         "licence": "Star Wars",
         "item": "Luke Skylwalker & Grogu",
         "description": "Figura coleccionable de Luke Skylwalker & Grogu - The Mandalorian Saga.",
@@ -43,6 +46,7 @@
     },
     {
         "id": "STW001004",
+        "collection": "starwars",
         "licence": "Star Wars",
         "item": "Stormtrooper Lightsaber",
         "description": "Figura coleccionable de Stormtrooper Lightsaber - Star Wars Saga.",
@@ -57,6 +61,7 @@
     },
     {
         "id": "PKM001001",
+        "collection": "pokemon",
         "licence": "Pokemon",
         "item": "Charmander Smiley",
         "description": "Figura coleccionable de Charmander - Pokemon Saga.",
@@ -71,6 +76,7 @@
     },
     {
         "id": "PKM001002",
+        "collection": "pokemon",
         "licence": "Pokemon",
         "item": "Dragonite Hi!",
         "description": "Figura coleccionable de Dragonite - Pokemon Saga.",
@@ -85,6 +91,7 @@
     },
     {
         "id": "PKM00103",
+        "collection": "pokemon",
         "licence": "Pokemon",
         "item": "Pidgeotto Flying",
         "description": "Figura coleccionable de Pidgeotto - Pokemon Saga.",
@@ -99,6 +106,7 @@
     },
     {
         "id": "PKM001004",
+        "collection": "pokemon",
         "licence": "Pokemon",
         "item": "Pikachu Smiley",
         "description": "Figura coleccionable de Pikachu - Pokemon Saga.",
@@ -113,6 +121,7 @@
     },
     {
         "id": "PKM001005",
+        "collection": "pokemon",
         "licence": "Pokemon",
         "item": "Vulpix Fancy",
         "description": "Figura coleccionable de Vulpix - Pokemon Saga.",
@@ -127,6 +136,7 @@
     },
     {
         "id": "HPT001001",
+        "collection": "harrypotter",
         "licence": "Harry Potter",
         "item": "Harry Potter & Hegwid",
         "description": "Figura coleccionable de Harry Potter & Hegwid - Harry Potter Saga.",
@@ -141,6 +151,7 @@
     },
     {
         "id": "HPT001002",
+        "collection": "harrypotter",
         "licence": "Harry Potter",
         "item": "Herminione Ball Dress",
         "description": "Figura coleccionable de Herminione - Harry Potter Saga.",
@@ -155,6 +166,7 @@
     },
     {
         "id": "HPT001003",
+        "collection": "harrypotter",
         "licence": "Harry Potter",
         "item": "Luna Lovegood Lion Mask",
         "description": "Figura coleccionable de Luna Lovegood - Harry Potter Saga.",
@@ -169,6 +181,7 @@
     },
     {
         "id": "HPT001004",
+        "collection": "harrypotter",
         "licence": "Harry Potter",
         "item": "Snape Patronus",
         "description": "Figura coleccionable de Snape Patronus - Harry Potter Saga.",
