@@ -145,6 +145,11 @@ html {
   font-family: "Raleway", sans-serif;
 }
 
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
 ul {
   list-style-type: none;
 }
@@ -158,6 +163,23 @@ a {
 
 p {
   font-family: "Inter", sans-serif;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1440px;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 @keyframes fade {
@@ -174,6 +196,7 @@ p {
   background-image: url("/img/funkos-banner.webp");
   background-size: cover;
   filter: brightness(0.9);
+  padding: 0 4rem;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -185,7 +208,6 @@ p {
   justify-content: center;
   align-items: flex-start;
   flex-grow: 1;
-  max-width: 1440px;
   margin: auto;
 }
 .hero__info--title {
@@ -215,7 +237,6 @@ p {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  max-width: 1440px;
   padding: 0 3rem;
   gap: 10rem;
   margin: auto;
@@ -267,7 +288,6 @@ p {
 }
 
 .products {
-  max-width: 1440px;
   margin: auto;
   padding: 4rem;
   display: flex;
@@ -394,6 +414,38 @@ p {
   background-color: #ff7070;
 }
 
+#login {
+  padding: 2rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+#login h2 {
+  text-align: center;
+  font-size: 3.8em;
+  color: #4f4f4f;
+  font-weight: 400;
+  margin: 4rem 0;
+}
+
+#register {
+  padding: 2rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+#register h2 {
+  text-align: center;
+  font-size: 3.8em;
+  color: #4f4f4f;
+  font-weight: 400;
+  margin: 4rem 0;
+}
+
 header {
   background-color: #111111;
 }
@@ -424,7 +476,8 @@ header nav .link {
   font-weight: medium;
   transition: background 0.3s ease;
 }
-header nav .link:not(.icon) {
+header nav .link:not(.icon) a {
+  display: inline-block;
   padding: 1rem 2rem;
 }
 header nav .link__icon {
@@ -434,6 +487,53 @@ header nav .link__icon {
 header nav .link:hover:not(.icon) {
   background-color: #ff3333;
   color: inherit;
+}
+
+.form {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 4rem;
+}
+.form__box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: medium;
+}
+.form__box--label {
+  min-width: 100px;
+  color: #4f4f4f;
+}
+.form__box--input {
+  flex-grow: 3;
+  padding: 1rem 0.5rem;
+  border: none;
+  border-bottom: 2px solid #ff3333;
+}
+.form--btn {
+  padding: 1.2rem 2.7rem;
+  max-width: 200px;
+  background-color: #ff3333;
+  color: #ffffff;
+  font-size: 1.2em;
+  font-weight: 500;
+  border: none;
+  margin: auto;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.form--btn:hover {
+  background-color: #111111;
+}
+.form a {
+  color: #4f4f4f;
+  font-size: 1.2em;
+  text-align: center;
 }
 
 footer {

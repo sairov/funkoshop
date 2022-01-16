@@ -1,0 +1,31 @@
+<%- include('../partials/header'); -%>
+<section id="register" class="container">
+    <h2>Que gusto que quieras ser parte del mundo Funko, a continuación podrás crear tu cuenta y comenzar a incrementar tu colección:</h2>
+    <form class="form" action="/register" method="POST" enctype="application/x-www-form-urlencoded">
+        <div class="form__box">
+            <label class="form__box--label"for="name">Nombre:</label>
+            <input class="form__box--input" type="text" name="name" id="name" placeholder="nombre" required>
+        </div>
+        <div class="form__box">
+            <label class="form__box--label"for="lastname">Apellido:</label>
+            <input class="form__box--input" type="text" name="lastname" id="lastname" placeholder="apellido" required>
+        </div>
+        <div class="form__box">
+            <label class="form__box--label"for="email">Email:</label>
+            <input class="form__box--input" type="email" name="email" id="email" placeholder="johndoe@email.com" required>
+        </div>
+        <div class="form__box">
+            <label class="form__box--label"for="password">Contraseña:</label>
+            <input class="form__box--input" type="password" name="password" id="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" required>
+        </div>
+        <div class="form__box">
+            <label class="form__box--label"for="repassword">Repite Contraseña:</label>
+            <input class="form__box--input" type="repassword" name="repassword" id="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" required>
+        </div>
+       <div class="form__box">
+        <input class="form--btn" type="submit" value="Ingresar">
+        <input class="form--btn" type="reset" value="Limpiar">
+       </div>
+    </form>
+</section>
+<%- include('../partials/footer'); -%>

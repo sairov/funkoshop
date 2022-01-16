@@ -1,0 +1,12 @@
+#login {
+    padding: 2rem;
+    margin: auto;
+    @include flex(column, center, stretch);
+    h2 {
+        text-align: center;
+        font-size: $jumbo;
+        color: $secondary;
+        font-weight: 400;
+        margin: 4rem 0;
+    }
+}

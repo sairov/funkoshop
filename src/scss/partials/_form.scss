@@ -1,0 +1,40 @@
+.form {
+    margin: auto;
+    @include flex(column, center, stretch);
+    gap: 4rem;
+    &__box {
+        @include flex(row, center, center);
+        gap: 1rem;
+        font-size: medium;
+        &--label {
+            min-width: 100px;
+            color: $secondary;                
+        }
+        &--input {
+            flex-grow: 3;
+            padding: 1rem .5rem;
+            border: none;
+            border-bottom: 2px solid $primary;
+        }
+    }
+    &--btn {
+        padding: 1.2rem 2.7rem;
+        max-width: 200px;
+        background-color: $primary;
+        color: $white;
+        font-size: $xsmall;
+        font-weight: 500;
+        border: none;
+        margin: auto;
+        cursor: pointer;
+        transition: background .3s ease;
+        &:hover {
+            background-color: $black;
+        }
+    }
+    a{
+        color: $secondary;
+        font-size: $xsmall;
+        text-align: center;    
+    }
+}
