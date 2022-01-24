@@ -1,0 +1,22 @@
+<%- include('../partials/header'); -%>
+<main id="admin" class="container">
+    <h1>Listado de Productos</h1>
+    <table class="table">
+        <li class="table__item">
+            <p>ID</p>
+            <p class="table__item--id">Código</p>
+            <p class="table__item--name">Nombre del Producto</p>
+        </li>
+        <% items.forEach( item => { %> 
+            <li class="table__item">
+                <p><%= item.id %></p>
+                <p class="table__item--id"><%= item.sku %></p>
+                <p class="table__item--name"><%= item.name %></p>
+                <a href="/admin/edit/<%= item.sku %>" class="table__item--edit">Editar</a>
+                <a href="/admin/delete/<%= item.sku %>?_method=DELETE" class="table__item--delete">Eliminar</a>
+            </li>
+        <% }); %> 
+    </table>
+</main>
+<%- include('../partials/footer'); -%>
+

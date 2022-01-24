@@ -22,7 +22,7 @@ module.exports = {
   },
   detail: (req, res) => {
     const itemID = req.params.id;
-    const item = items.find((el) => el.id == itemID);
+    const item = items.find((el) => el.sku == itemID);
     const related = items.filter(
       (el) => el.licence == item.licence && el.id !== item.id
     );

@@ -1,11 +1,10 @@
 <%- include('../partials/header'); -%>
-<section id="create" class="container">
+<section id="update" class="container">
     <h2>Ingresa los datos a continuación para crear un nuevo item:</h2>
-    <form class="form" action="/admin/create" method="POST" enctype="application/x-www-form-urlencoded">
+    <form class="form" action="/admin/edit/<%= item.sku %>?_method=PUT" method="POST" enctype="application/x-www-form-urlencoded">
         <div class="form__box">
             <label class="form__box--label" for="collection">Licencia:</label>
-            <select class="form__box--select" name="collection" id="collection" required>
-                <option value="" disabled selected hidden>Seleccionar</option>
+            <select class="form__box--select" name="licence" id="licence">
                 <option value="starwars">Star Wars</option>
                 <option value="pokemon">Pokemon</option>
                 <option value="harrypotter">Harry Potter</option>
@@ -13,22 +12,22 @@
         </div>
         <div class="form__box">
             <label class="form__box--label" for="name">Nombre del producto:</label>
-            <input class="form__box--input" type="text" name="name" id="name" placeholder="nombre del producto" required>
+            <input class="form__box--input" type="text" name="name" id="name" value="<%= item.name %>" required>
         </div>
         <div class="form__box">
-            <textarea class="form__box--area" name="description" id="description" cols="30" rows="10" placeholder="Descripción del producto" required></textarea>
+            <textarea class="form__box--area" name="description" id="description" cols="30" rows="10" required><%= item.description %></textarea>
         </div>
         <div class="form__box">
             <label class="form__box--label" for="sku">SKU:</label>
-            <input class="form__box--input" type="text" name="sku" id="sku" placeholder="ABCXXXYYY" required>
+            <input class="form__box--input" type="text" name="sku" id="sku" value="<%= item.sku %>" required>
         </div>
         <div class="form__box">
             <label class="form__box--label" for="price">Precio:</label>
-            <input class="form__box--input" type="text" name="price" id="price" data-type="currency" placeholder="$ 0.000,00">
+            <input class="form__box--input" type="text" name="price" id="price" data-type="currency" value="<%= item.price %>">
         </div>
         <div class="form__box">
             <label class="form__box--label"for="discount">Descuento:</label>
-            <input class="form__box--input" type="number" min="0" max="100" step="5" name="discount" id="discount" placeholder="0 %" required>
+            <input class="form__box--input" type="number" min="0" max="100" step="5" name="discount" id="discount" value="<%= item.discount %> %" required>
         </div>
         <div class="form__box">
             <label class="form__box--label"for="dues">Cuotas:</label>
@@ -44,15 +43,14 @@
         </div>
         <div class="form__box">
             <label class="form__box--label"for="stock">Stock:</label>
-            <input class="form__box--input" type="number" min="0" name="stock" id="stock" placeholder="0 unidades" required>
+            <input class="form__box--input" type="number" min="0" name="stock" id="stock" value="<%= item.stock %>" required>
         </div>
-        <!-- <div class="form__box">
+        <div class="form__box">
             <label class="form__box--label"for="img">Imagenes:</label>
             <input type="file" name="img" id="img" multiple>    
-        </div> -->
+        </div>
        <div class="form__box">
-        <input class="form--btn" type="submit" value="Agregar Producto">
-        <input class="form--btn" type="reset" value="Limpiar">
+        <input class="form--btn" type="submit" value="Modificar Producto">
        </div>
     </form>
 </section>

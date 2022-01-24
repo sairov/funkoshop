@@ -7,6 +7,7 @@ const methodOverride = require('method-override');
 const mainRoutes = require('./src/routes/mainRoutes');
 const shopRoutes = require('./src/routes/shopRoutes');
 const userRoutes = require('./src/routes/userRoutes');
+const adminRoutes = require('./src/routes/adminRoutes');
 
 // Puerto
 const puerto = process.env.PORT || 3000;
@@ -32,6 +33,7 @@ app.set('views', path.join(__dirname, './src/views'));
 app.use('/', mainRoutes);
 app.use('/', userRoutes);
 app.use('/shop',shopRoutes);
+app.use('/admin',adminRoutes);
 app.use((req, res, next) => {
     res.status(404).render('404')
 })

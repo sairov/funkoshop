@@ -148,6 +148,8 @@ html {
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  align-items: center;
 }
 
 ul {
@@ -170,8 +172,16 @@ input[type=radio] {
   cursor: pointer;
 }
 
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  border-color: #4f4f4f;
+}
+
 .container {
   max-width: 1440px;
+  margin: 0 auto;
 }
 
 .flex-row {
@@ -180,6 +190,18 @@ input[type=radio] {
   justify-content: space-around;
   align-items: center;
   gap: 0.5rem;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 @keyframes fade {
@@ -446,6 +468,62 @@ input[type=radio] {
   margin: 4rem 0;
 }
 
+#admin h1 {
+  margin: 2rem 0;
+}
+#admin .table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+}
+#admin .table__item {
+  display: grid;
+  grid-template-columns: 20px 1fr 4fr auto auto;
+  align-items: center;
+  gap: 2rem;
+}
+#admin .table__item--id, #admin .table__item--name {
+  font-size: 1.8em;
+}
+#admin .table__item a {
+  display: inline-block;
+  font-size: 1.2em;
+  color: #4f4f4f;
+}
+
+#create,
+#update {
+  padding: 2rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+#create h2,
+#update h2 {
+  text-align: center;
+  font-size: 3.8em;
+  color: #4f4f4f;
+  font-weight: 400;
+  margin: 4rem 0;
+}
+#create .form__box--select,
+#update .form__box--select {
+  padding: 0.5rem;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+#create .form__box--area,
+#update .form__box--area {
+  font-family: "Inter", sans-serif;
+  padding: 0.5rem;
+  width: 100%;
+}
+
 header {
   background-color: #111111;
 }
@@ -503,7 +581,7 @@ header nav .link:hover:not(.icon) {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  font-size: medium;
+  font-size: 1.6em;
 }
 .form__box--label {
   min-width: 100px;
@@ -520,7 +598,6 @@ header nav .link:hover:not(.icon) {
   max-width: 200px;
   background-color: #ff3333;
   color: #ffffff;
-  font-size: 1.2em;
   font-weight: 500;
   border: none;
   margin: auto;

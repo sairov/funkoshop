@@ -10,10 +10,10 @@
         </picture>
         <article class="item__info">
             <p class="item__info--licence"><%= item.licence.toUpperCase() %></p>
-            <h2 class="item__info--name"><%= item.item.toUpperCase() %></h2>
+            <h2 class="item__info--name"><%= item.name.toUpperCase() %></h2>
             <p class="item__info--description"><%= item.description %></p>
             <p class="item__info--price">$ <%= item.price %></p>
-            <form class="item__form" action="/cart/add" method="POST" enctype="application/x-www-form-urlencoded">
+            <form class="item__form" action="/cart/add/<%= item.sku %>" method="POST" enctype="application/x-www-form-urlencoded">
                 <div class="item__form--container">
                     <button class="item__form--btn" type="button">-</button>
                     <input class="item__form--input" type="text" placeholder="0">

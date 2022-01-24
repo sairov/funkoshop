@@ -5,7 +5,7 @@
 <section class="products container">
     <% products.forEach(item => { %> 
         <article class="card">
-            <a href="/shop/detail/<%= item.id %>">
+            <a href="/shop/detail/<%= item.sku %>">
                 <picture class="card__picture">
                     <% if (item.discount) { %>
                         <span class="card__picture--pill"><%= item.discount %></span>
@@ -15,7 +15,7 @@
                 </picture>
                 <div class="card__info">
                     <h3 class="card__info--title"><%= item.licence.toUpperCase()%></h3>
-                    <h4 class="card__info--item"><%= item.item.toUpperCase() %></h4>
+                    <h4 class="card__info--item"><%= item.name.toUpperCase() %></h4>
                     <p class="card__info--price">$ <%= item.price %> .-</p>
                     <p class="card__info--dues"><%= item.dues %> CUOTAS SIN INTERÉS</p>
                 </div>

@@ -5,7 +5,7 @@
     &__box {
         @include flex(row, center, center);
         gap: 1rem;
-        font-size: medium;
+        font-size: $small;
         &--label {
             min-width: 100px;
             color: $secondary;                
@@ -22,7 +22,6 @@
         max-width: 200px;
         background-color: $primary;
         color: $white;
-        font-size: $xsmall;
         font-weight: 500;
         border: none;
         margin: auto;
@@ -32,7 +31,7 @@
             background-color: $black;
         }
     }
-    a{
+    a {
         color: $secondary;
         font-size: $xsmall;
         text-align: center;    

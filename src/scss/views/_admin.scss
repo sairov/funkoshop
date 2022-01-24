@@ -1,0 +1,25 @@
+#admin {
+    h1 {
+        margin: 2rem 0;
+    }
+    .table {
+        @include flex(column, center, stretch);
+        gap: 2rem;
+        &__item {
+            display: grid;
+            grid-template-columns: 20px 1fr  4fr auto auto;
+            align-items: center;
+            gap: 2rem;
+            &--id,
+            &--name {
+                font-size: $medium;
+            }
+            a {
+                display: inline-block;
+                font-size: $xsmall;
+                color: $secondary;
+            }
+        }
+    }
+}
+
